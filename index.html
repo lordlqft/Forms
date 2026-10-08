@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <section class="formulario">
+            <h1>Login</h1>
+            <form id="formulario">
+                <label class="form-label" for="nome">Nome</label>
+                <input type="text" placeholder="Insira seu nome" name="nome" required><br><br>
+                <label class="form-label" for="sobrenome">Sobrenome</label>
+                <input type="text" placeholder="Insira seu sobrenome" name="sobrenome" required><br><br>
+                <label class="form-label" for="email">Email</label>
+                <input type="email" placeholder="Insira seu email" name="email" required><br><br>
+                <label class="form-label" for="senha">Senha</label>
+                <input type="password" placeholder="Insira sua senha" name="senha" minlength="8" required><br><br>
+                <label class="form-label" for="telefone">Telefone</label>
+                <input type="tel" placeholder="Insira seu telefone" name="telefone" required><br><br>
+                <label class="form-label" for="idade">Idade</label>
+                <input type="number" placeholder="Insira sua idade" name="idade" min="14" max="100" required><br><br>
+                <label class="form-label" for="data_nascimento">Data de Nascimento</label><br>
+                <input type="date" name="data_nascimento" required><br><br>
+                <button type="submit">Entrar</button><br>
+                <button type="reset">Limpar</button>
+            </form>
+
+            <script>
+                const formulario = document.getElementById("formulario");
+
+                formulario.addEventListener("submit", function (event) {
+                    event.preventDefault();
+
+                    if (formulario.checkValidity()) {
+                        window.location.href = "cursos.html";
+                    }
+                });
+            </script>
+        </section>
+    </main>
+</body>
+
+</html>
