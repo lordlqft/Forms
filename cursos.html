@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <section class="formulario">
+            <h1>Escolha do curso</h1>
+            <form id="formulario">
+                <label for="curso">Escolha o curso</label><br>
+                <input type="radio" name="curso" value="curso1" required> HTML e CSS<br>
+                <input type="radio" name="curso" value="curso2" required> JavaScript<br>
+                <input type="radio" name="curso" value="curso3" required> Python<br>
+                <input type="radio" name="curso" value="curso4" required> Java<br>
+                <input type="radio" name="curso" value="curso5" required> Banco de Dados<br><br>
+                <label for="modalidade">Escolha a modalidade</label><br>
+                <input type="radio" name="modalidade" value="presencial" required> Presencial<br>
+                <input type="radio" name="modalidade" value="online" required> Online<br>
+                <label for="turno">Escolha o turno</label><br>
+                <input type="radio" name="turno" value="manha" required> Manhã<br>
+                <input type="radio" name="turno" value="tarde" required> Tarde<br>
+                <input type="radio" name="turno" value="noite" required> Noite<br><br>
+                <label for="nivel">Nível de conhecimento</label><br>
+                <select name="nivel" id="nivel" required>
+                    <option value="">Selecione seu nível</option>
+                    <option value="iniciante">Iniciante</option>
+                    <option value="intermediario">Intermediário</option>
+                    <option value="avancado">Avançado</option>
+                </select><br><br>
+                <label for="tecnologias">Tecnologias conhecidas</label><br>
+                <input type="checkbox" name="tecnologias" value="HTML"> HTML<br>
+                <input type="checkbox" name="tecnologias" value="CSS"> CSS<br>
+                <input type="checkbox" name="tecnologias" value="JavaScript"> JavaScript<br>
+                <input type="checkbox" name="tecnologias" value="Python"> Python<br>
+                <input type="checkbox" name="tecnologias" value="Java"> Java<br>
+                <input type="checkbox" name="tecnologias" value="C#"> C#<br><br>
+                <label for="localizacao">Localização</label><br>
+                <select name="localizacao" id="localizacao" required>
+                    <option value="">Selecione sua localização</option>
+                    <option value="sao-paulo">São Paulo</option>
+                    <option value="rio-de-janeiro">Rio de Janeiro</option>
+                    <option value="santa-catarina">Santa Catarina</option>
+                    <option value="distrito-federal">Distrito Federal</option>
+                    <option value="minas-gerais">Minas Gerais</option>
+                </select><br><br>
+                <textarea name="cidade" placeholder="Digite sua cidade" required></textarea><br><br>
+                <label for="motivacao">Por que você deseja fazer este curso?</label><br>
+                <textarea name="motivacao" placeholder="Descreva sua motivação" minlength="20"
+                    required></textarea><br><br>
+                <label for="termos">Termos de inscrição</label><br>
+                <input type="checkbox" name="termos" value="aceito" required> Aceito os termos de inscrição<br><br>
+
+                <button type="submit">Entrar</button>
+                <button type="reset">Limpar</button>
+            </form>
+
+            <script>
+                const formulario = document.getElementById("formulario");
+
+                formulario.addEventListener("submit", function (event) {
+                    event.preventDefault();
+
+                    if (formulario.checkValidity()) {
+                        window.location.href = "cursos.html";
+                    }
+                });
+            </script>
+        </section>
+    </main>
+</body>
+
+</html>
